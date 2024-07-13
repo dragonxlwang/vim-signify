@@ -183,7 +183,7 @@ function! sy#util#popup_create(hunkdiff) abort
   elseif exists('*popup_create')
     let s:popup_window = popup_create(map(a:hunkdiff, 'v:val[0].padding.v:val[1:]'), {
           \ 'line': 'cursor+1',
-          \ 'col': 0,
+          \ 'col': 1,
           \ 'minwidth': winwidth('%'),
           \ 'maxheight': height,
           \ 'moved': 'any',
